@@ -18,7 +18,33 @@
 		41EFF58527B7C2E500BE4D99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41EFF58327B7C2E500BE4D99 /* Main.storyboard */; };
 		41EFF58727B7C2E700BE4D99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41EFF58627B7C2E700BE4D99 /* Assets.xcassets */; };
 		41EFF58A27B7C2E700BE4D99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41EFF58827B7C2E700BE4D99 /* LaunchScreen.storyboard */; };
+		41EFF59027B7C3EB00BE4D99 /* XSProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41EFF56527B7BFB100BE4D99 /* XSProgressHUD.framework */; };
+		41EFF59127B7C3EB00BE4D99 /* XSProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 41EFF56527B7BFB100BE4D99 /* XSProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		41EFF59227B7C3EB00BE4D99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41EFF55C27B7BFB100BE4D99 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 41EFF56427B7BFB100BE4D99;
+			remoteInfo = XSProgressHUD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		41EFF59427B7C3EB00BE4D99 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				41EFF59127B7C3EB00BE4D99 /* XSProgressHUD.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		41EFF56527B7BFB100BE4D99 /* XSProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XSProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41EFF59027B7C3EB00BE4D99 /* XSProgressHUD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +90,7 @@
 				41EFF56727B7BFB100BE4D99 /* Sources */,
 				41EFF57C27B7C2E500BE4D99 /* Example */,
 				41EFF56627B7BFB100BE4D99 /* Products */,
+				41EFF58F27B7C3EB00BE4D99 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +125,13 @@
 				41EFF58B27B7C2E700BE4D99 /* Info.plist */,
 			);
 			path = Example;
+			sourceTree = "<group>";
+		};
+		41EFF58F27B7C3EB00BE4D99 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,10 +173,12 @@
 				41EFF57727B7C2E500BE4D99 /* Sources */,
 				41EFF57827B7C2E500BE4D99 /* Frameworks */,
 				41EFF57927B7C2E500BE4D99 /* Resources */,
+				41EFF59427B7C3EB00BE4D99 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				41EFF59327B7C3EB00BE4D99 /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -228,6 +265,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		41EFF59327B7C3EB00BE4D99 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 41EFF56427B7BFB100BE4D99 /* XSProgressHUD */;
+			targetProxy = 41EFF59227B7C3EB00BE4D99 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		41EFF58327B7C2E500BE4D99 /* Main.storyboard */ = {
@@ -442,12 +487,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zlucy.Example;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zlucy.XSProgressHUDExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -470,12 +516,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zlucy.Example;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zlucy.XSProgressHUDExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
