@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
-class XSProgressHUD: UIView {
+public class XSProgressHUD: UIView {
+    
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
     
 }
